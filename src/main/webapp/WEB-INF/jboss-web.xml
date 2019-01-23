@@ -1,0 +1,4 @@
+<jboss-web>
+  <security-domain>DatabaseRealm</security-domain>
+  <context-root>openshift-innovate</context-root>
+</jboss-web>

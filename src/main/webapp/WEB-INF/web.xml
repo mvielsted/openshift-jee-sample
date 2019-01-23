@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app>
+  <filter>
+    <filter-name>cross-origin</filter-name>
+    <filter-class>org.eclipse.jetty.servlets.CrossOriginFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>cross-origin</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <context-param>
+    <param-name>resteasy.role.based.security</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>HtmlAuth</web-resource-name>
+      <description>application security constraints
+      </description>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+  </security-constraint>
+  <login-config>
+    <auth-method>BASIC</auth-method>
+    <realm-name>DatabaseRealm</realm-name>
+  </login-config>
+</web-app>

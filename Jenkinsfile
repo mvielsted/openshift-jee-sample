@@ -8,7 +8,7 @@ node {
 		def jbossHome = env.JENKINS_JBOSS7_HOME
 		def pom
 		def version
-		def deployZipFile ='in4mo-insurance-bin.zip'
+		def deployZipFile ='openshift-innovate.zip'
 
 		def developController = 'A04763:9990'
 		def testController = 'A04392:9990'
